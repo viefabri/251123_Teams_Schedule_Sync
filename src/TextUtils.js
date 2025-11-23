@@ -39,6 +39,13 @@ const TextUtils = {
      */
     parseUtcDate: function (dateString) {
         if (!dateString) return null;
-        return new Date(dateString);
+
+        // 文字列の末尾が 'Z' でない場合、強制的に 'Z' を付与してUTC扱いにする
+        let utcString = dateString;
+        if (!utcString.endsWith('Z')) {
+            utcString += 'Z';
+        }
+
+        return new Date(utcString);
     }
 };

@@ -79,7 +79,7 @@ const SyncEngine = {
             const description = TextUtils.removeHtmlTags(event.body?.content || event.body || '');
             const location = event.location?.displayName || event.location || '';
             const title = event.subject || '(No Title)';
-            const outlookId = event.id;
+            const outlookId = event.ID || event.id;
 
             if (!outlookId) {
                 console.warn('Event without ID found, skipping.');
