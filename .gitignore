@@ -1,0 +1,11 @@
+# 既存の設定...
+.clasp.json
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+src/Config.js
+*.json
+!src/appsscript.json
+!package.json
